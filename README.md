@@ -2,6 +2,9 @@
 
 Welcome to the JuliaMaker's Project repository! This is a place where curated projects, using JuliaMaker packages or just Julia in general, can be posted. 
 
+## Curated Project List
+- Uh-oh so far this is brand new! Nothing to show off yet!
+
 To submit a project, make a Pull Request, with the project in it's own directory.
 
 ## FAQ's
