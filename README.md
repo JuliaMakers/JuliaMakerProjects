@@ -11,7 +11,7 @@ Never fear, the process goes something like the following:
 - Create changes on that branch and commit them with a descriptive message
 - Push the new branch to your forked JuliaMakerProjects repository
 - Create a pull request using github.com interface.
-Feel free to ask for help in the Julia Slack channel
+Feel free to ask for help in the Julia Slack channel(#my-first-pr)
 
 ## How should My Project be organized?
 - It should be inside of a directory with a name detailing the nature of the project
