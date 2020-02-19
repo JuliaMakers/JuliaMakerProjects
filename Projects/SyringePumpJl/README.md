@@ -1,4 +1,6 @@
 # SyringePumpJl
+![topview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/TopView.jpg)
+![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/SideView.jpg)
 SyringePumpJl is a Julia + Arduino + Hardware project. The project provides a crude launch point for making your own syringe pump! Syringe pumps are tools that dispense volumes of liquid, over a specified period of time. They can be highly accurate devices if calibrated and constructed properly. Some applications are: chemical/biological experiments, aquariums, medicine, etc. The downside is that they can cost 500-2,000 USD$! So making your own can be fun, but potentially also practical!
 
 ## How does Julia play a role?
