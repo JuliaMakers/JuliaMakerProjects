@@ -1,39 +1,58 @@
-# JuliaMakerProjects
+# SyringePumpJl
+SyringePumpJl is a Julia + Arduino + Hardware project. The project provides a crude launch point for making your own syringe pump! Syringe pumps are tools that dispense volumes of liquid, over a specified period of time. They can be highly accurate devices if calibrated and constructed properly. Some applications are: chemical/biological experiments, aquariums, medicine, etc. The downside is that they can cost 500-2,000 USD$! So making your own can be fun, but potentially also practical!
 
-Welcome to the JuliaMaker's Project repository! This is a place where curated projects, using JuliaMaker packages or just Julia in general, can be posted. 
+## How does Julia play a role?
+Julia provides an interface to the Arduino which drives the stepper motor. It also hosts an interface via Blink.jl, which allows for easy calibration. Julia also offers uncertainties in the measurements and the calibration (via Measurements.jl) and easily handles the units involved in the conversions (via Unitful.jl).
 
-## Curated Project List
-- Uh-oh so far this is brand new! Nothing to show off yet!
+## Why did you use Julia for this project?
+It was really easy to make a GUI, pass data over serial, and handle the math. So the math is all algebra really, but, it was really easy to prototype this project. In total it took roughly 4 afternoons to design both the hardware and write the code.
 
-To submit a project, make a Pull Request, with the project in it's own directory.
+## What do you plan to use your project for?
+Well once upon a time... Many years ago I concocted an experiment involving a physical effect which may or may not exist. I'd like to think that I could use this someday to test that. But... In reality, I just made it because it was a fun minimal project others could build off of, or build for themselves! Maybe it would help an underfunded lab? Don't know!
 
-## FAQ's
+# Bill of Materials
 
-### How do I make a Pull Request?
-Never fear, the process goes something like the following:
-- Fork this repository to your own github account.
-- Create a new branch with ideally a descriptive name
-- Create changes on that branch and commit them with a descriptive message
-- Push the new branch to your forked JuliaMakerProjects repository
-- Create a pull request using github.com interface.
-Feel free to ask for help in the Julia Slack channel(#my-first-pr)
+### Off the Shelf Components
+ - T8 Leed Screw Rod and Nut
+ - Shaft Coupler (for Screw Rod to the steper motor)
+ - 8mm OD stainless steel rod
+ - Stepper motor
+ - Arduino Uno R3
+ - Arctic Silver + Small Heat Sink for L293d IC!
+ - L293D motor shield
+ - 12V 1A power supply/cellphone charger
+ - Syringe
+ - 2 stubby M5 screws and nuts
+ - A binder clip/rubber band
 
-### How should My Project be organized?
-- It should be inside of a directory with a name detailing the nature of the project
-- That main directory should have descriptive subdirectories for disperate items. IE: Media, CAD, Julia, Arduino, etc.
-- The main directory should contain a README.md file which describes the effort, your name(if you want), and how the project is organized. It can have other things too! Like links to a youtube video, or anything reasonable.
+### Custom Components
+ - 2x 3-D printed parts (see CAD subdirectory)
 
-### Are There Any Rules?
-Yes!
-- Follow the code of conduct of the repository.
-- Your project must be open source, MIT License.
-- You don't have the right to edit anyone elses project unless they have given their express permission.
-- Projects can be deleted at your request, but Git stores everything...
-- You can omit details of a project to focus on the Julia specific parts, that is fine. Completely documenting hobby projects is laborious - we get it. But please do your best.
+### Tools Needed
+ - Micrometer
+ - Screw driver/hex set
+ - Razor blade (for removing 3-D printed supports)
+ - 2 drops of cyanoacrylate glue(for fixing nuts to 3-D print)
+ - Computer (Julia + Arduino IDE + FreeCAD)!
 
-### Why was my PR denied?
-- Did it contain somesort of weapon? If so, it's gonna get denied.
-- Does its intended use violate human rights or something awful like that? Yep, not going to be hosted here.
-- Otherwise, there should be a reason given in the PR.
+### Estimated cost
+50-70 USD$ depending on what you have available.
 
-We will do our best to work with people to create a high enough standard for submission without too much effort, but please understand, this is a brand new avenue for open source on github (I think?) and we're not 100% sure how it should happen! If you have idea's please file an issue or get into contact! 
+# Continuous Improvement
+
+## What could be improved?
+### Software
+ - The code is pretty sloppy and somewhat undocumented.
+ - Uncertainty could actually change the results.
+ - The calibration could be saved/loaded for ease of use.
+
+### Physical/Hardware
+ - Mass would be a better way to calibrate the pump. But I don't own a scale.
+ - The tolerance of the linear guide rails and the plunger carriage could be tighter.
+ - A smaller shaft coupler could have been used to give a longer dynamic range.
+ - The guide rails could have been cut with a hacksaw to size for aesthetics!
+ - The V-block for holding the plunger and the syringe body could be cut deeper, or offer greater support for the syringe.
+ - Instead of using a rubber band to hold the plunger to the carriage, a clip, or fastener could be used.
+
+## Could your project benefit from a new Julia package?
+Sure. I could foresee packages for spinning up simple UI's, plots/structures for dynamic instructions(imagine an arbitrary function driving the motor). It lead to a couple github issues(found a bug and a missing feature). I'm glad I did it, also now I have a cool new syringe pump!

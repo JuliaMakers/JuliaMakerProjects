@@ -167,7 +167,7 @@ function launch_pump_interface(com_port::String; baud_rate::Int64 = 9600)
                             calibration_plt, c.widget
                     );
 
-    units       = UncertainInputField( "Dispense Rate", 50.0, 0.02, u"mm / mL");
+    units       = UncertainInputField( "Marking vs Volume", 50.0, 0.02, u"mm / mL");
     volume      = InputField( "Volume", 5.0, u"mL");
     duration    = InputField( "Duration", 3.0, u"s");
     driver_btn2 = Widgets.button("Drive Pump");
