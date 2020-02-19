@@ -11,8 +11,8 @@ using SyringePumpJl
 #Launch the Web-UI
 launch_pump_interface("/dev/ACM0")
 ```
-![topview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/CalibrateWindow.jpg)
-![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/DriverWindow.jpg)
+![calibrate](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/CalibrateWindow.png)
+![drive](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/DriverWindow.png)
 
 
 ## How does Julia play a role?
@@ -62,6 +62,7 @@ Well once upon a time... Many years ago I concocted an experiment involving a ph
 
 ### Physical/Hardware
  - Mass would be a better way to calibrate the pump. But I don't own a scale.
+ - Finer pitch leed screw would give better resolution. Anti-backlash nut would also help with hystersis.
  - The tolerance of the linear guide rails and the plunger carriage could be tighter.
  - A smaller shaft coupler could have been used to give a longer dynamic range.
  - The guide rails could have been cut with a hacksaw to size for aesthetics!
