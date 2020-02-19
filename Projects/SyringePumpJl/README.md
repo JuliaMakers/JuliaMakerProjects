@@ -3,6 +3,18 @@
 ![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/SideView.jpg)
 SyringePumpJl is a Julia + Arduino + Hardware project. The project provides a crude launch point for making your own syringe pump! Syringe pumps are tools that dispense volumes of liquid, over a specified period of time. They can be highly accurate devices if calibrated and constructed properly. Some applications are: chemical/biological experiments, aquariums, medicine, etc. The downside is that they can cost 500-2,000 USD$! So making your own can be fun, but potentially also practical!
 
+## How do I install it?
+```Julia
+using Pkg
+Pkg.API.develop(Pkg.PackageSpec(name="SyringePumpJl", path="/home/caseykneale/Desktop/JuliaMakerProjects/Projects/SyringePumpJl"))
+using SyringePumpJl
+#Launch the Web-UI
+launch_pump_interface("/dev/ACM0")
+```
+![topview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/CalibrateWindow.jpg)
+![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/DriverWindow.jpg)
+
+
 ## How does Julia play a role?
 Julia provides an interface to the Arduino which drives the stepper motor. It also hosts an interface via Blink.jl, which allows for easy calibration. Julia also offers uncertainties in the measurements and the calibration (via Measurements.jl) and easily handles the units involved in the conversions (via Unitful.jl).
 
