@@ -52,8 +52,6 @@ Well once upon a time... Many years ago I concocted an experiment involving a ph
 ### Estimated cost
 50-70 USD$ depending on what you have available.
 
-# Continuous Improvement
-
 ## What could be improved?
 ### Software
  - The code is pretty sloppy and somewhat undocumented.
@@ -70,4 +68,4 @@ Well once upon a time... Many years ago I concocted an experiment involving a ph
  - Instead of using a rubber band to hold the plunger to the carriage, a clip, or fastener could be used.
 
 ## Could your project benefit from a new Julia package?
-Sure. I could foresee packages for spinning up simple UI's, plots/structures for dynamic instructions(imagine an arbitrary function driving the motor). It lead to a couple github issues(found a bug and a missing feature). I'm glad I did it, also now I have a cool new syringe pump!
+Sure. I could foresee packages for spinning up simple UI's, plots/structures for dynamic instructions(imagine an arbitrary function driving the motor). The project lead to a couple git hub issues (found a bug and a missing feature). I'm glad I worked on this it was a lot of fun, and now I have a cool new syringe pump!
