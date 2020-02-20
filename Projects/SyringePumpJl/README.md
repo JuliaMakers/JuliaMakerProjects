@@ -1,6 +1,6 @@
 # SyringePumpJl
-![topview](https://github.com/JuliaMakers/JuliaMakerProjects/tree/master/Projects/SyringePumpJl/Images/TopView.jpg)
-![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/tree/master/Projects/SyringePumpJl/Images/SideView.jpg)
+![topview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/master/Projects/SyringePumpJl/Images/TopView.jpg)
+![sideview](https://github.com/JuliaMakers/JuliaMakerProjects/blob/master/Projects/SyringePumpJl/Images/SideView.jpg)
 SyringePumpJl is a Julia + Arduino + Hardware project. The project provides a crude launch point for making your own syringe pump! Syringe pumps are tools that dispense volumes of liquid, over a specified period of time. They can be highly accurate devices if calibrated and constructed properly. Some applications are: chemical/biological experiments, aquariums, medicine, etc. The downside is that they can cost 500-2,000 USD$! So making your own can be fun, but potentially also practical!
 
 ## How do I install it?
@@ -18,8 +18,8 @@ launch_pump_interface("/dev/ACM0")
 ## How does Julia play a role?
 Julia provides a serial(USB) interface to the Arduino which drives the stepper motor. It also hosts a graphical user interface via [Blink.jl](https://github.com/JuliaGizmos/Blink.jl), which allows for easy calibration/operation. Julia also offers uncertainties in the measurements and the calibration (via [Measurements.jl](https://github.com/JuliaPhysics/Measurements.jl) and easily handles the units involved in the conversions (via [Unitful.jl](https://github.com/timholy/Unitful.jl)). Some images of the GUI are below(note you can interact with the GUI without having an Arduino).
 
-![calibrate](https://github.com/JuliaMakers/JuliaMakerProjects/tree/master/Projects/SyringePumpJl/Images/CalibrateWindow.png)
-![drive](https://github.com/JuliaMakers/JuliaMakerProjects/tree/master/Projects/SyringePumpJl/Images/DriverWindow.png)
+![calibrate](https://github.com/JuliaMakers/JuliaMakerProjects/blob/master/Projects/SyringePumpJl/Images/CalibrateWindow.png)
+![drive](https://github.com/JuliaMakers/JuliaMakerProjects/blob/master/Projects/SyringePumpJl/Images/DriverWindow.png)
 
 ## Why did you use Julia for this project?
 It was really easy to make a GUI, pass data over serial, and handle the math. So the math is all algebra really, but, it handled all uncertainties and physical units for me so it was really easy to prototype. In total it took roughly 4-5 afternoons to design both the hardware and write the code for this. Is it a work of art? definitely not, but I was just hacking away and look I easily made a real thing with a real use case.
