@@ -14,15 +14,15 @@ using SyringePumpJl
 #Launch the Web-UI
 launch_pump_interface("/dev/ACM0")
 ```
+
+## How does Julia play a role?
+Julia provides a serial(USB) interface to the Arduino which drives the stepper motor. It also hosts a graphical user interface via [Blink.jl](https://github.com/JuliaGizmos/Blink.jl), which allows for easy calibration/operation. Julia also offers uncertainties in the measurements and the calibration (via [Measurements.jl](https://github.com/JuliaPhysics/Measurements.jl) and easily handles the units involved in the conversions (via [Unitful.jl](https://github.com/timholy/Unitful.jl)). Some images of the GUI are below(note you can interact with the GUI without having an Arduino).
+
 ![calibrate](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/CalibrateWindow.png)
 ![drive](https://github.com/JuliaMakers/JuliaMakerProjects/blob/cpk_proto_proj/Projects/SyringePumpJl/Images/DriverWindow.png)
 
-
-## How does Julia play a role?
-Julia provides an interface to the Arduino which drives the stepper motor. It also hosts an interface via Blink.jl, which allows for easy calibration. Julia also offers uncertainties in the measurements and the calibration (via Measurements.jl) and easily handles the units involved in the conversions (via Unitful.jl).
-
 ## Why did you use Julia for this project?
-It was really easy to make a GUI, pass data over serial, and handle the math. So the math is all algebra really, but, it handled all uncertainties and physical units for me so it was really easy to prototype. In total it took roughly 4-5 afternoons to design both the hardware and write the code for this.
+It was really easy to make a GUI, pass data over serial, and handle the math. So the math is all algebra really, but, it handled all uncertainties and physical units for me so it was really easy to prototype. In total it took roughly 4-5 afternoons to design both the hardware and write the code for this. Is it a work of art? definitely not, but I was just hacking away and look I easily made a real thing with a real use case.
 
 ## What do you plan to use your project for?
 Well once upon a time... Many years ago I concocted an experiment involving a physical effect which may or may not exist. I'd like to think that I could use this someday to test that. But... In reality, I just made it because it was a fun minimal project others could build off of, or build for themselves! Maybe it would help an underfunded lab? Don't know!
@@ -57,17 +57,19 @@ Well once upon a time... Many years ago I concocted an experiment involving a ph
 
 ## What could be improved?
 ### Software
- - The code is pretty sloppy and somewhat undocumented.
- - Uncertainty could actually change the results.
+ - The code is pretty sloppy and somewhat under documented.
+ - The propagated uncertainty values could actually change the results.
  - The calibration could be saved/loaded for ease of use.
+ - A clean REPL interface/workflow could also be made.
 
 ### Physical/Hardware
  - Mass would be a better way to calibrate the pump. But I don't own a scale.
- - Finer pitch leed screw would give better resolution. Anti-backlash nut would also help with hystersis.
+ - Finer pitch leed screw would give better resolution. Anti-backlash nut would also help with hysteresis.
  - The tolerance of the linear guide rails and the plunger carriage could be tighter.
  - A smaller shaft coupler could have been used to give a longer dynamic range.
  - The guide rails could have been cut with a hacksaw to size for aesthetics!
  - The V-block for holding the plunger and the syringe body could be cut deeper, or offer greater support for the syringe. Instead of using a rubber band to hold the plunger to the carriage, a clip, or fastener could be used.
+ - A nice enclosure for the Arduino could add some safety features for compliance in a wet-lab, but this is just for fun.
 
 ## Could your project benefit from a new Julia package?
-Sure. I could foresee packages for spinning up simple UI's, plots/structures for dynamic instructions(imagine an arbitrary function driving the motor). The project lead to a couple git hub issues (found a bug and a missing feature). I'm glad I worked on this it was a lot of fun, and now I have a cool new syringe pump!
+Sure. I could foresee packages for spinning up simple UI's, plots/structures for dynamic instructions (imagine an arbitrary function driving the motor). The project lead to a couple git hub issues (found a bug and a missing feature). I'm glad I worked on this it was a lot of fun, and now I have a cool new syringe pump that I can change in anyway I want too!
